@@ -30,7 +30,7 @@ body {
     font-family: 'Playfair Display', serif;
 }
 
-        /* Background atmosphere */
+        /* Задняя атмосфера */
 .bg-atmosphere {
     background: 
         radial-gradient(ellipse at 20% 0%, rgba(107, 45, 60, 0.3) 0%, transparent 50%),
@@ -39,7 +39,7 @@ body {
         var(--bg-primary);
 }
 
-/* Grain texture overlay */
+/* Наложение зернистой текстуры */
 .grain-overlay::before {
     content: '';
     position: fixed;
@@ -53,7 +53,7 @@ body {
     z-index: 1000;
 }
 
-/* Gold gradient text */
+/* Золотой градиент текста */
 .text-gold-gradient {
     background: linear-gradient(135deg, var(--accent-gold-light) 0%, var(--accent-gold) 50%, #b8954d 100%);
     -webkit-background-clip: text;
@@ -61,7 +61,7 @@ body {
     background-clip: text;
 }
 
-/* Button styles */
+/* Стили кнопок */
 .btn-gold {
     background: linear-gradient(135deg, var(--accent-gold) 0%, #b8954d 100%);
     color: var(--bg-primary);
@@ -99,7 +99,7 @@ body {
     color: var(--bg-primary);
 }
 
-/* Navigation */
+/* Навигация */
 .nav-link {
     position: relative;
     color: var(--text-muted);
@@ -130,7 +130,7 @@ body {
     width: 100%;
 }
 
-/* Cards */
+/* Карточки */
 .performance-card {
     background: var(--bg-card);
     border-radius: 8px;
@@ -153,7 +153,7 @@ body {
     transform: scale(1.05);
 }
 
-/* Section divider */
+/* Разделение секций */
 .section-divider {
     width: 60px;
     height: 2px;
@@ -161,7 +161,7 @@ body {
     margin: 0 auto;
 }
 
-/* Seat selection */
+/* Выбор мест */
 .seat {
     width: 28px;
     height: 28px;
@@ -196,7 +196,7 @@ body {
     cursor: not-allowed;
 }
 
-/* Stage curve */
+/* Сцена */
 .stage-curve {
     background: radial-gradient(circle at center, rgba(201,169,98,0.25), transparent 70%);
     box-shadow: 0 20px 60px rgba(201,169,98,0.15);
@@ -214,7 +214,7 @@ body {
     text-transform: uppercase;
 }
 
-/* Scroll reveal */
+/* Анимация прокрутки */
 .reveal {
     opacity: 0;
     transform: translateY(40px);
@@ -226,7 +226,7 @@ body {
     transform: translateY(0);
 }
 
-/* Mobile menu */
+/* Мобильное меню */
 .mobile-menu {
     position: fixed;
     top: 0;
@@ -243,7 +243,7 @@ body {
     transform: translateX(0);
 }
 
-/* Age badge */
+/* Значок возраста */
 .age-badge {
     background: var(--accent-burgundy);
     color: var(--text-primary);
@@ -253,7 +253,7 @@ body {
     font-weight: 600;
 }
 
-/* Floating particles */
+/* Летающие частицы */
 .particle {
     position: absolute;
     width: 4px;
@@ -269,7 +269,7 @@ body {
     50% { transform: translateY(-100px) translateX(30px); opacity: 0.6; }
 }
 
-/* Curtain animation */
+/* Анимация занавеса */
 .curtain-left, .curtain-right {
     position: fixed;
     top: 0;
@@ -298,7 +298,7 @@ body {
     transform: translateX(100%);
 }
 
-/* Tabs */
+/* Вкладки */
 .tab-btn {
     padding: 12px 24px;
     background: transparent;
@@ -326,7 +326,7 @@ body {
     background: var(--accent-gold);
 }
 
-/* Input styles */
+/* Входные стили */
 .form-input {
     width: 100%;
     padding: 16px 20px;
@@ -348,7 +348,7 @@ body {
     color: var(--text-muted);
 }
 
-/* News card hover */
+/* Эффект при наведении на карточки новостей */
 .news-card {
     background: var(--bg-card);
     border-radius: 8px;
@@ -360,7 +360,7 @@ body {
     background: #2a232d;
 }
 
-/* Reduced motion */
+/* Снижение анимации */
 @media (prefers-reduced-motion: reduce) {
     *, *::before, *::after {
         animation-duration: 0.01ms !important;
@@ -369,7 +369,7 @@ body {
     }
 }
 
-/* Custom scrollbar */
+/* Кастомный скроллбар */
 ::-webkit-scrollbar {
     width: 8px;
 }
@@ -387,7 +387,7 @@ body {
     background: var(--accent-gold);
 }
 
-/* Page sections */
+/* Секции страниц */
 .page-section {
     display: none;
 }
@@ -445,9 +445,3 @@ body {
     opacity: 1;
     transform: translate(-50%, -50%) scale(1);
 }
-
-/* chat */
-
-
-
-

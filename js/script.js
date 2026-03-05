@@ -103,19 +103,19 @@ const news = [
     {
         title: "Премьера «Макбета» состоится 15 апреля",
         image: "https://images.unsplash.com/photo-1503095396549-807759245b35?w=600",
-        date: "10 апрель 2026",
+        date: "10 март 2026",
         excerpt: "Приглашаем зрителей на долгожданную премьеру сезона — трагедию Уильяма Шекспира «Макбет» в постановке главного режиссера Елены Соколовой."
     },
     {
         title: "Театр принял участие в фестивале «Золотая маска»",
         image: "https://images.unsplash.com/photo-1507676184212-d03ab07a01bf?w=600",
-        date: "5 апрель 2026",
+        date: "5 март 2026",
         excerpt: "Спектакль «Вишневый сад» был представлен на престижном театральном фестивале и получил высокую оценку жюри."
     },
     {
         title: "Открыта продажа абонементов на новый сезон",
         image: "https://sun9-16.userapi.com/s/v1/ig2/H9TkyguITOWFayNVU5z-tIT9HKWbBUgVRPexuJBKcrdxUu_8FsvzJiQ6N_EjGriNL5b1E7EXKdhbOZgBuyQvWOlt.jpg?quality=95&as=32x32,48x48,72x72,108x108,160x160,240x240,360x360,480x480,540x540,640x640,720x720,1080x1080,1280x1280,1440x1440,2160x2160&from=bu&cs=640x0",
-        date: "28 апрель 2026",
+        date: "28 март 2026",
         excerpt: "Приобретайте абонементы на второй половину сезона 2024/2025 со скидкой 15% до конца января."
     },
     {
@@ -138,7 +138,7 @@ const news = [
     }
 ];
 
-// ==================== STATE ====================
+// Состояние приложения
 let currentSection = 'home';
 let currentSlide = 0;
 let selectedPerformance = null;
@@ -146,7 +146,7 @@ let selectedSession = null;
 let selectedSeats = [];
 let slideInterval = null;
 
-// ==================== INITIALIZATION ====================
+// Инициализация (запуск сайта)
 document.addEventListener('DOMContentLoaded', () => {
     initParticles();
     initCurtains();
@@ -161,7 +161,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initPaymentForm();
 });
 
-// ==================== CURTAINS ====================
+// Театральный занавес
 function initCurtains() {
     setTimeout(() => {
         document.getElementById('curtainLeft').classList.add('open');
@@ -169,7 +169,7 @@ function initCurtains() {
     }, 300);
 }
 
-// ==================== PARTICLES ====================
+// Частицы (эффект пыли / золотых частиц)
 function initParticles() {
     const container = document.getElementById('particles');
     for (let i = 0; i < 20; i++) {
@@ -183,7 +183,7 @@ function initParticles() {
     }
 }
 
-// ==================== SCROLL REVEAL ====================
+// Анимация появления при прокрутке
 function initScrollReveal() {
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
@@ -196,7 +196,7 @@ function initScrollReveal() {
     document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 }
 
-// ==================== HEADER SCROLL ====================
+// Эффект шапки при прокрутке
 function initHeaderScroll() {
     let lastScroll = 0;
     window.addEventListener('scroll', () => {
@@ -215,7 +215,7 @@ function initHeaderScroll() {
     });
 }
 
-// ==================== SLIDER ====================
+// Слайдер
 function startSlider() {
     slideInterval = setInterval(() => {
         currentSlide = (currentSlide + 1) % 3;
@@ -244,7 +244,7 @@ function updateSlider() {
     });
 }
 
-// ==================== NAVIGATION ====================
+// Навигация по сайту
 function showSection(section) {
     // Hide all sections
     document.querySelectorAll('.page-section').forEach(s => {
@@ -277,7 +277,7 @@ function toggleMobileMenu() {
     document.getElementById('mobileMenu').classList.toggle('open');
 }
 
-// ==================== RENDER FUNCTIONS ====================
+// Функции отображения контента
 function renderUpcomingPerformances() {
     const container = document.getElementById('upcomingPerformances');
     const upcoming = performances.filter(p => p.status !== 'archive').slice(0, 6);
@@ -395,7 +395,7 @@ function renderNews() {
     `).join('');
 }
 
-// ==================== PERFORMANCE MODAL ====================
+// Модальное окно спектакля
 function openPerformanceModal(id) {
     const performance = performances.find(p => p.id === id);
     if (!performance) return;
@@ -470,7 +470,7 @@ function closePerformanceModal(e) {
     document.body.style.overflow = '';
 }
 
-// ==================== SEAT SELECTION ====================
+// ВЫБОР МЕСТ
 function generateSeats() {
     const rows = 8;
     const seatsPerRow = 12;
@@ -591,7 +591,7 @@ function goBackFromSeats() {
     }
 }
 
-// ==================== PAYMENT ====================
+// Оплата
 function proceedToPayment() {
     if (selectedSeats.length === 0) return;
     

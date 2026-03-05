@@ -24,19 +24,19 @@
     </script>
 </head>
 <body class="bg-atmosphere grain-overlay">
-    <!-- Curtains -->
+    <!-- Занавесы -->
     <div class="curtain-left" id="curtainLeft"></div>
     <div class="curtain-right" id="curtainRight"></div>
 
-    <!-- Floating particles -->
+    <!-- Частицы -->
     <div id="particles" class="fixed inset-0 pointer-events-none overflow-hidden z-0"></div>
 
-    <!-- Navigation -->
+    <!-- Навигация -->
 <header class="fixed top-0 left-0 right-0 z-50 transition-all duration-300" id="header">
     <div class="absolute inset-0 bg-gradient-to-b from-black/80 to-transparent"></div>
     <nav class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex items-center justify-between h-20">
-            <!-- Logo -->
+            <!-- Лого -->
             <a href="#" class="flex items-center gap-3" onclick="showSection('home')">
                 <div class="w-12 h-12 border border-[var(--accent-gold)] rounded-full flex items-center justify-center">
                     <div width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="text-[var(--accent-gold)]">
@@ -49,7 +49,7 @@
                 </div>
             </a>
 
-            <!-- Desktop Navigation -->
+            <!-- Навигация для ноута -->
             <div class="hidden lg:flex items-center gap-8">
                 <a href="#" class="nav-link active" data-section="home" onclick="showSection('home')">Главная</a>
                 <a href="#" class="nav-link" data-section="afisha" onclick="showSection('afisha')">Афиша</a>
@@ -59,12 +59,12 @@
                 <a href="#" class="nav-link" data-section="contacts" onclick="showSection('contacts')">Контакты</a>
             </div>
 
-            <!-- CTA Button -->
+            <!-- Кнопка купить -->
             <div class="hidden lg:block">
                 <button class="btn-gold" onclick="showSection('afisha')">Купить билет</button>
             </div>
 
-            <!-- Mobile Menu Toggle -->
+            <!-- Переключатель мобильного меню -->
             <button class="lg:hidden p-2" onclick="toggleMobileMenu()" aria-label="Открыть меню">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-[var(--accent-gold)]">
                     <line x1="3" y1="6" x2="21" y2="6"/>
@@ -76,7 +76,7 @@
     </nav>
 </header>
 
-<!-- Mobile Menu -->
+<!-- Мобильное меню -->
 <div class="mobile-menu" id="mobileMenu">
     <div class="flex flex-col h-full">
         <div class="flex items-center justify-between p-6 border-b border-[var(--border-color)]">
@@ -102,9 +102,9 @@
     </div>
 </div>
 
-<!-- Main Content -->
+<!-- Главный контент -->
 <main>
-    <!-- HOME SECTION -->
+    <!-- Главная секция -->
     <section id="section-home" class="page-section active">
         <!-- Hero -->
         <div class="relative min-h-screen flex items-center overflow-hidden">
@@ -157,14 +157,14 @@
                         </div>
                     </div>
 
-                    <!-- CTA buttons -->
+                    <!-- Кнопки меню и подробнее -->
                     <div class="reveal flex flex-wrap gap-4" style="transition-delay: 0.4s;">
                         <button class="btn-gold" onclick="showSection('afisha')">Купить билет</button>
                         <button class="btn-outline" onclick="openPerformanceModal(0)">Подробнее</button>
                     </div>
                 </div>
 
-                <!-- Slider indicators -->
+                <!-- Слайдер -->
                 <div class="absolute bottom-10 left-1/2 -translate-x-1/2 flex gap-3">
                     <button class="w-12 h-1 bg-[var(--accent-gold)] rounded-full slider-dot active" data-slide="0" onclick="goToSlide(0)"></button>
                     <button class="w-12 h-1 bg-[var(--border-color)] rounded-full slider-dot" data-slide="1" onclick="goToSlide(1)"></button>
@@ -172,7 +172,7 @@
                 </div>
             </div>
 
-            <!-- Scroll indicator -->
+            <!-- Индикатор скролла -->
             <div class="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 animate-bounce">
                 <span class="text-xs text-[var(--text-muted)] uppercase tracking-wider">Листайте</span>
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-[var(--accent-gold)]">
@@ -181,29 +181,29 @@
             </div>
         </div>
 
-        <!-- Upcoming Performances -->
+        <!-- Предстоящие спектакли -->
         <div class="py-20 lg:py-32">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <!-- Section header -->
+                <!-- Заголовок раздела -->
                 <div class="reveal text-center mb-16">
                     <span class="text-sm text-[var(--accent-gold)] uppercase tracking-[3px] mb-4 block">Расписание</span>
                     <h2 class="font-display text-3xl sm:text-4xl lg:text-5xl font-bold mb-6">Ближайшие спектакли</h2>
                     <div class="section-divider"></div>
                 </div>
 
-                <!-- Performances grid -->
+                <!-- Сетка спектаклей -->
                 <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8" id="upcomingPerformances">
-                    <!-- Filled by JS -->
+                    <!-- Заполняется через JS -->
                 </div>
 
-                <!-- View all button -->
+                <!-- Кнопка "смотреть всё" -->
                 <div class="reveal text-center mt-12">
                     <button class="btn-outline" onclick="showSection('afisha')">Смотреть всю афишу</button>
                 </div>
             </div>
         </div>
 
-        <!-- News Preview -->
+        <!-- Превью новостей -->
         <div class="py-20 lg:py-32 bg-gradient-to-b from-transparent via-[var(--bg-secondary)] to-transparent">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="reveal text-center mb-16">
@@ -213,12 +213,12 @@
                 </div>
 
                 <div class="grid lg:grid-cols-3 gap-8" id="newsPreview">
-                    <!-- Filled by JS -->
+                    <!-- Заполняется через JS -->
                 </div>
             </div>
         </div>
 
-        <!-- Quick Contacts -->
+        <!-- Контакты -->
         <div class="py-20 lg:py-32">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="reveal grid lg:grid-cols-2 gap-12 items-center">
@@ -286,33 +286,33 @@
         </div>
     </section>
 
-    <!-- AFISHA SECTION -->
+    <!-- Секция афиши -->
     <section id="section-afisha" class="page-section">
         <div class="pt-32 pb-20 lg:py-32">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <!-- Header -->
+                <!-- Заголовок -->
                 <div class="reveal text-center mb-12">
                     <span class="text-sm text-[var(--accent-gold)] uppercase tracking-[3px] mb-4 block">Репертуар</span>
                     <h1 class="font-display text-4xl sm:text-5xl lg:text-6xl font-bold mb-6">Афиша спектаклей</h1>
                     <div class="section-divider"></div>
                 </div>
 
-                <!-- Tabs -->
+                <!-- Разделы -->
                 <div class="reveal flex justify-center gap-2 mb-12 flex-wrap">
                     <button class="tab-btn active" data-tab="current" onclick="filterPerformances('current')">В репертуаре</button>
                     <button class="tab-btn" data-tab="premiere" onclick="filterPerformances('premiere')">Премьеры</button>
                     <button class="tab-btn" data-tab="archive" onclick="filterPerformances('archive')">Архив</button>
                 </div>
 
-                <!-- Performances -->
+                <!-- Спектакли -->
                 <div class="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6" id="afishaGrid">
-                    <!-- Filled by JS -->
+                    <!-- Заполняется через JS -->
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- PERFORMANCE DETAIL SECTION -->
+    <!-- Раздел с деталями спектакля -->
     <section id="section-performance" class="page-section">
         <div class="pt-24 pb-20 lg:py-32">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -324,18 +324,18 @@
                 </button>
 
                 <div class="grid lg:grid-cols-2 gap-12" id="performanceDetail">
-                    <!-- Filled by JS -->
+                    <!-- Заполняется через JS -->
                 </div>
 
-                <!-- Sessions -->
+                <!-- Сессии -->
                 <div class="mt-16" id="performanceSessions">
-                    <!-- Filled by JS -->
+                    <!-- Заполняется через JS -->
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- SEAT SELECTION SECTION -->
+    <!-- Раздел выбора мест -->
     <section id="section-seats" class="page-section">
         <div class="pt-24 pb-20 lg:py-32">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -347,22 +347,22 @@
                 </button>
 
                 <div class="grid lg:grid-cols-3 gap-8">
-                    <!-- Hall scheme -->
+                    <!-- Схема зала -->
                     <div class="lg:col-span-2">
                         <div class="reveal bg-[var(--bg-card)] rounded-xl p-6 border border-[var(--border-color)]">
                             <h2 class="font-display text-2xl font-bold mb-6 text-center" id="seatsPerformanceTitle">Выбор мест</h2>
                             
-                            <!-- Stage -->
+                            <!-- Сцена -->
                             <div class="stage-curve"></div>
 
-                            <!-- Hall map -->
+                            <!-- Карта зала -->
                             <div class="overflow-x-auto pb-4">
                                 <div class="min-w-[400px]" id="hallMap">
-                                    <!-- Filled by JS -->
+                                    <!-- заполняется через JS -->
                                 </div>
                             </div>
 
-                            <!-- Legend -->
+                            <!-- Легенда -->
                             <div class="flex flex-wrap justify-center gap-6 mt-8 pt-6 border-t border-[var(--border-color)]">
                                 <div class="flex items-center gap-2">
                                     <div class="w-6 h-6 rounded-t-lg rounded-b-xl bg-[var(--bg-card)] border border-[var(--border-color)]"></div>
@@ -380,7 +380,7 @@
                         </div>
                     </div>
 
-                    <!-- Order summary -->
+                    <!-- Сводка заказа -->
                     <div class="lg:col-span-1">
                         <div class="reveal bg-[var(--bg-card)] rounded-xl p-6 border border-[var(--border-color)] sticky top-24">
                             <h3 class="font-display text-xl font-bold mb-4">Ваш заказ</h3>
@@ -404,7 +404,7 @@
         </div>
     </section>
 
-    <!-- PAYMENT SECTION -->
+    <!-- РАЗДЕЛ ОПЛАТЫ -->
     <section id="section-payment" class="page-section">
         <div class="pt-24 pb-20 lg:py-32">
             <div class="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -415,15 +415,15 @@
                 </div>
 
                 <div class="bg-[var(--bg-card)] rounded-xl p-6 sm:p-8 border border-[var(--border-color)]">
-                    <!-- Order info -->
+                    <!-- Информация о заказе -->
                     <div class="mb-8 pb-6 border-b border-[var(--border-color)]">
                         <h3 class="font-semibold text-lg mb-4">Информация о заказе</h3>
                         <div id="paymentOrderInfo" class="space-y-2 text-sm">
-                            <!-- Filled by JS -->
+                            <!-- Заполняется через JS -->
                         </div>
                     </div>
 
-                    <!-- Contact form -->
+                    <!-- Форма контактов -->
                     <form id="paymentForm" class="space-y-6">
                         <div>
                             <label class="block text-sm font-medium mb-2">ФИО покупателя</label>
@@ -440,7 +440,7 @@
                             </div>
                         </div>
 
-                        <!-- Payment method -->
+                        <!-- Способ оплаты -->
                         <div>
                             <label class="block text-sm font-medium mb-3">Способ оплаты</label>
                             <div class="grid grid-cols-2 gap-3">
@@ -454,7 +454,7 @@
                                 </label>
                             </div>
                         </div>
-
+                        <!-- Оплата -->
                         <div class="flex gap-4 pt-4">
                             <button type="button" class="btn-outline flex-1" onclick="showSection('seats')">Назад</button>
                             <button type="submit" class="btn-gold flex-1">Оплатить</button>
@@ -465,18 +465,18 @@
         </div>
     </section>
 
-    <!-- ABOUT SECTION -->
+    <!-- РАЗДЕЛ О ТЕАТРЕ -->
     <section id="section-about" class="page-section">
         <div class="pt-32 pb-20 lg:py-32">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <!-- Hero -->
+                <!-- Заголовок -->
                 <div class="reveal text-center mb-16">
                     <span class="text-sm text-[var(--accent-gold)] uppercase tracking-[3px] mb-4 block">История</span>
                     <h1 class="font-display text-4xl sm:text-5xl lg:text-6xl font-bold mb-6">О театре</h1>
                     <div class="section-divider"></div>
                 </div>
 
-                <!-- Story -->
+                <!-- История театра -->
                 <div class="grid lg:grid-cols-2 gap-12 items-center mb-20">
                     <div class="reveal">
                         <h2 class="font-display text-3xl font-bold mb-6 text-gold-gradient">Более 100 лет истории</h2>
@@ -494,10 +494,11 @@
                     </div>
                 </div>
 
-                <!-- Leadership -->
+                <!-- Руководство -->
                 <div class="reveal mb-20">
                     <h2 class="font-display text-3xl font-bold mb-10 text-center">Руководство</h2>
                     <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                        <!-- Карточка директора -->
                         <div class="bg-[var(--bg-card)] rounded-xl p-6 border border-[var(--border-color)] text-center">
                             <div class="w-24 h-24 rounded-full overflow-hidden mx-auto mb-4 border-2 border-[var(--accent-gold)]">
                                 <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200" alt="Директор" class="w-full h-full object-cover">
@@ -525,7 +526,7 @@
                     </div>
                 </div>
 
-                <!-- Stats -->
+                <!-- Статистика -->
                 <div class="reveal grid grid-cols-2 lg:grid-cols-4 gap-6">
                     <div class="bg-[var(--bg-card)] rounded-xl p-6 border border-[var(--border-color)] text-center">
                         <div class="font-display text-4xl font-bold text-gold-gradient mb-2">100+</div>
@@ -548,7 +549,7 @@
         </div>
     </section>
 
-    <!-- TROUPE SECTION -->
+    <!-- Труппа -->
     <section id="section-troupe" class="page-section">
         <div class="pt-32 pb-20 lg:py-32">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -559,13 +560,13 @@
                 </div>
 
                 <div class="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6" id="troupeGrid">
-                    <!-- Filled by JS -->
+                    <!-- Заполняется через JS -->
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- NEWS SECTION -->
+    <!-- Новости -->
     <section id="section-news" class="page-section">
         <div class="pt-32 pb-20 lg:py-32">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -576,13 +577,13 @@
                 </div>
 
                 <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8" id="newsGrid">
-                    <!-- Filled by JS -->
+                    <!-- Заполняется через JS -->
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- CONTACTS SECTION -->
+    <!-- Контакты -->
     <section id="section-contacts" class="page-section">
         <div class="pt-32 pb-20 lg:py-32">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -593,7 +594,7 @@
                 </div>
 
                 <div class="grid lg:grid-cols-2 gap-12">
-                    <!-- Contact info -->
+                    <!-- Инфо о контактах -->
                     <div class="reveal space-y-8">
                         <div class="bg-[var(--bg-card)] rounded-xl p-6 border border-[var(--border-color)]">
                             <h3 class="font-display text-xl font-bold mb-6 text-gold-gradient">Как нас найти</h3>
@@ -654,7 +655,7 @@
                             </div>
                         </div>
 
-                        <!-- Social links -->
+                        <!-- Соц.сети -->
                         <div class="bg-[var(--bg-card)] rounded-xl p-6 border border-[var(--border-color)]">
                             <h3 class="font-display text-xl font-bold mb-6 text-gold-gradient">Мы в соцсетях</h3>
                             <div class="flex gap-4">
@@ -677,7 +678,7 @@
                         </div>
                     </div>
 
-                    <!-- Map -->
+                    <!-- Местоположение -->
                     <div class="reveal">
                         <div class="aspect-square lg:aspect-auto lg:h-full min-h-[400px] rounded-xl overflow-hidden border border-[var(--border-color)]">
                             <iframe 
@@ -697,7 +698,7 @@
     </section>
 </main>
 
-<!-- Footer -->
+<!-- Подвал -->
 <footer class="bg-[var(--bg-secondary)] border-t border-[var(--border-color)] py-12">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
@@ -747,7 +748,7 @@
     </div>
 </footer>
 
-<!-- Performance Modal -->
+<!-- МОДАЛЬНОЕ ОКНО СПЕКТАКЛЯ -->
 <div class="modal-overlay" id="performanceModal" onclick="closePerformanceModal(event)">
     <div class="modal-content p-6 sm:p-8" onclick="event.stopPropagation()">
         <button class="absolute top-4 right-4 text-[var(--text-muted)] hover:text-[var(--accent-gold)] transition-colors" onclick="closePerformanceModal()" aria-label="Закрыть">
@@ -757,12 +758,12 @@
             </svg>
         </button>
         <div id="modalContent">
-            <!-- Filled by JS -->
+            <!-- Заполняется через JS -->
         </div>
     </div>
 </div>
 
-<!-- Success Modal -->
+<!-- МОДАЛЬНОЕ ОКНО УСПЕХА -->
 <div class="modal-overlay" id="successModal">
     <div class="modal-content p-8 text-center" onclick="event.stopPropagation()">
         <div class="w-20 h-20 rounded-full bg-[var(--accent-gold)]/20 flex items-center justify-center mx-auto mb-6">
