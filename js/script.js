@@ -22,7 +22,7 @@ const performances = [
         age: "12+",
         director: "Михаил Волков",
         status: "current",
-        premiereDate: "20 марта 2024",
+        premiereDate: "20 марта 2026",
         actors: ["Елена Петрова", "Иван Сидоров", "Ольга Кuzнецова"]
     },
     {
@@ -35,7 +35,7 @@ const performances = [
         age: "12+",
         director: "Станислав Касьянов",
         status: "current",
-        premiereDate: "10 октября 2023",
+        premiereDate: "10 октября 2026",
         actors: ["Сергей Новиков", "Татьяна Морозова", "Павел Васильев"]
     },
     {
@@ -48,7 +48,7 @@ const performances = [
         age: "16+",
         director: "Михаил Волков",
         status: "current",
-        premiereDate: "5 сентября 2024",
+        premiereDate: "5 апрель 2026",
         actors: ["Андрей Белов", "Ксения Лебедева", "Николай Орлов"]
     },
     {
@@ -61,7 +61,7 @@ const performances = [
         age: "14+",
         director: "Елена Соколова",
         status: "archive",
-        premiereDate: "15 март 2025",
+        premiereDate: "15 март 2026",
         actors: ["Екатерина Жукова", "Михаил Баринов", "Анна Титова"]
     },
     {
