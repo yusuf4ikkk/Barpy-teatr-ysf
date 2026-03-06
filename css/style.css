@@ -254,20 +254,24 @@ body {
 }
 
 /* Летающие частицы */
+
 .particle {
     position: absolute;
     width: 4px;
     height: 4px;
     background: var(--accent-gold);
     border-radius: 50%;
-    opacity: 0.3;
-    animation: float 15s infinite ease-in-out;
+    opacity: 0.8;
+    animation: float 1s infinite ease-in-out;
 }
 
 @keyframes float {
     0%, 100% { transform: translateY(0) translateX(0); opacity: 0.3; }
     50% { transform: translateY(-100px) translateX(30px); opacity: 0.6; }
 }
+ 
+
+
 
 /* Анимация занавеса */
 .curtain-left, .curtain-right {
